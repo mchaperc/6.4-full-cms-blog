@@ -4,8 +4,8 @@ var User = Backbone.Model.extend({
 	}
 });
 
-var Users = Backbone.Collection.extend({
+var UserCollection = Backbone.Collection.extend({
 	model: User,
 });
 
-export default {User, Users};
+export default {User, UserCollection};
