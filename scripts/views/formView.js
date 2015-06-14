@@ -32,6 +32,9 @@ export default Backbone.View.extend({
 			title: title,
 			content: content
 		})
+		this.$('form').each(function() {
+			this.reset();
+		});
 	}
 
 });

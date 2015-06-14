@@ -1,0 +1,36 @@
+.post-item-view {
+	@include span-columns(5);
+	@include shift(3);
+	background-color: white;
+	box-shadow: 0 0 2px rgba(0,0,0,.2);
+	margin-top: 3em;
+	padding-left: 1em;
+	padding-bottom: 1em;
+	position: relative;
+}
+
+.fa-close {
+	position: absolute;
+	right: 2%;
+	top: 5%;
+	transition: all .3s linear;
+}
+
+.fa-close:hover {
+	color: red;
+	cursor: pointer;
+	transform: scale(1.5);
+}
+
+.post-title {
+	border-bottom: 1px solid $light-gray;
+	width: 80%;
+	margin: auto;
+	margin-top: 1em;
+	margin-bottom: .5em;
+}
+
+.post-content {
+	width: 80%;
+	margin: auto;
+}

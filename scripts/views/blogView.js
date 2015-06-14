@@ -6,7 +6,7 @@ export default Backbone.View.extend({
 	className: 'post-item-view',
 
 	events: {
-
+		'click .fa-close': 'deletePost'
 	},
 
 	initialize: function() {
@@ -15,6 +15,10 @@ export default Backbone.View.extend({
 
 	render: function() {
 		this.$el.html(this.template(this.model));
+	},
+
+	deletePost: function(id) {
+		console.log(id);
 	}
 
 });

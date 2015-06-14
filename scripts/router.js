@@ -34,7 +34,6 @@ var Router = Backbone.Router.extend({
 			$('#app').html(blogList.el);
 			var blogForm = new FormView({collection: this.posts});
 			$('#app').append(blogForm.el);
-			console.log(this.posts);
 		});
 	},
 
@@ -43,10 +42,9 @@ var Router = Backbone.Router.extend({
 			_.each(posts, function(post) {
 				if(post._id === id) {
 					var blogPost = new BlogView({model: post});
-					$('#app').append(blogPost.el);
+					$('#blog-post').html(blogPost.el);
 				}
 			})
-			console.log(posts);
 		});
 	}
 

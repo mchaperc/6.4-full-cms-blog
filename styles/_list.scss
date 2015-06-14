@@ -1,4 +1,23 @@
 .blog-post-list {
 	@include span-columns(3);
 	@include omega();
+	background-color: rgb(240,240,240);
+	height: 100%;
+}
+
+ul {
+	margin-top: 0;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	color: $blue;
+	text-decoration: none;
+}
+
+a:visited {
+	color: $blue;
 }
