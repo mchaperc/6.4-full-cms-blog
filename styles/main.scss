@@ -1,5 +1,10 @@
 @import '../bower_components/bourbon/app/assets/stylesheets/bourbon';
+$gutter: 0em;
 @import '../bower_components/neat/app/assets/stylesheets/neat';
+
+* {
+	outline: none;
+}
 
 // Typography
 $base-font-family: $helvetica;
@@ -13,6 +18,17 @@ $very-light-gray: #fafafa;
 
 $base-font-color: $dark-gray;
 $base-background-color: $very-light-gray;
+
+@import '../styles/_form';
+@import '../styles/_login';
+@import '../styles/_list';
+@import '../styles/_post';
+
+html, body {
+	height: 100%;
+	width: 100%;
+	padding: 0;
+}
 
 body {
   font-family: $base-font-family;

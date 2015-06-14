@@ -11,6 +11,7 @@ export default Backbone.View.extend({
 
 	initialize: function() {
 		this.render();
+		this.listenTo(this.collection, 'update', this.render);
 	},
 
 	render: function() {

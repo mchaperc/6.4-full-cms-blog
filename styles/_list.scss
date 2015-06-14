@@ -1,0 +1,4 @@
+.blog-post-list {
+	@include span-columns(3);
+	@include omega();
+}

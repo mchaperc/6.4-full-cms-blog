@@ -2,11 +2,12 @@ export default Backbone.View.extend({
 
 	template: JST.form,
 
-	tagName: 'form',
-	className: 'add-post-form',
+	tagName: 'div',
+	className: 'form-container',
 
 	events: {
-
+		'click .showForm': 'showForm',
+		'click .submit-blog-post': 'postBlog'
 	},
 
 	initialize: function() {
@@ -15,6 +16,22 @@ export default Backbone.View.extend({
 
 	render: function() {
 		this.$el.html(this.template(this.collection));
+	},
+
+	showForm: function() {
+		$('.add-post-form').slideToggle();
+	},
+
+	postBlog: function(e) {
+		e.preventDefault();
+		var content = $('.add-blog-content-input').val();
+		var title = $('.add-blog-title-input').val();
+		// var username = $('.').val();
+		this.collection.create({
+			// username: username,
+			title: title,
+			content: content
+		})
 	}
 
 });

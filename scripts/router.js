@@ -1,6 +1,7 @@
 import ListView from './views/listView';
 import FormView from './views/formView';
 import LoginView from './views/loginView';
+import BlogView from './views/blogView';
 import {UserCollection} from './models/userModel';
 import {Post, PostCollection} from './models/postModel';
 
@@ -9,7 +10,7 @@ var Router = Backbone.Router.extend({
 	routes: {
 		'': 'index',
 		'blog': 'loadBlogs',
-		'blog/:id': 'loadPost',
+		':id': 'loadPost',
 	},
 
 	initialize: function() {
@@ -37,8 +38,16 @@ var Router = Backbone.Router.extend({
 		});
 	},
 
-	loadPost: function() {
-
+	loadPost: function(id) {
+		this.posts.fetch().then(function(posts) {
+			_.each(posts, function(post) {
+				if(post._id === id) {
+					var blogPost = new BlogView({model: post});
+					$('#app').append(blogPost.el);
+				}
+			})
+			console.log(posts);
+		});
 	}
 
 });
