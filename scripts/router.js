@@ -10,7 +10,7 @@ var Router = Backbone.Router.extend({
 	routes: {
 		'': 'index',
 		'blog': 'loadBlogs',
-		':id': 'loadPost',
+		'blog/:id': 'loadPost'
 	},
 
 	initialize: function() {
@@ -30,16 +30,15 @@ var Router = Backbone.Router.extend({
 	loadBlogs: function() {
 		this.posts.fetch().then(function(data) {
 			this.posts = new PostCollection(data);
-			var blogList = new ListView({collection: this.posts});
-			$('#app').html(blogList.el);
-			var blogForm = new FormView({collection: this.posts});
-			$('#app').append(blogForm.el);
-		});
+			this.blogList = new ListView({collection: this.posts});
+			$('#app').html(this.blogList.el);
+			this.blogForm = new FormView({collection: this.posts});
+			$('#app').append(this.blogForm.el);
+		}.bind(this));
 	},
 
 	loadPost: function(id) {
 		var post = this.posts.get(id);
-		console.log(post);
 		this.blogPost = new BlogView({model: post, collection: this.posts});
 		$('#blog-post').html(this.blogPost.el);
 	}

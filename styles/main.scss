@@ -35,3 +35,11 @@ body {
   background-color: $base-background-color;
   color: $base-font-color;
 }
+
+#app {
+	border-left: 1px solid $light-gray;
+	border-right: 1px solid $light-gray;
+	height: 100%;
+	max-width: 1300px;
+	margin: auto;
+}

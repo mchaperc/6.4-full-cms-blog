@@ -1,11 +1,17 @@
 var Post = Backbone.Model.extend({
 
+	urlRoot: 'http://tiny-lasagna-server.herokuapp.com/collections/matts_posts',
+
 	idAttribute: '_id',
 	defaults: {
 		username: '',
 		title: '',
 		content: ''
-	}
+	},
+
+	// toJSON: function() {
+	// 	return _.extend()
+	// }
 
 });
 

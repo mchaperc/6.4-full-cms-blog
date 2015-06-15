@@ -4,22 +4,22 @@
 	background-color: white;
 	box-shadow: 0 0 2px rgba(0,0,0,.2);
 	margin-top: 3em;
-	padding-left: 1em;
+	margin-bottom: 2em;
 	padding-bottom: 1em;
 	position: relative;
 }
 
 .fa-pencil {
 	position: absolute;
-	left: 3%;
-	top: 3%;
+	left: 1em;
+	top: 1em;
 	transition: all .3s linear;
 }
 
 .fa-close {
 	position: absolute;
-	right: 3%;
-	top: 3%;
+	right: 1em;
+	top: 1em;
 	transition: all .3s linear;
 }
 
@@ -38,8 +38,21 @@
 .post-title {
 	width: 80%;
 	margin: auto;
-	margin-top: 1em;
+	margin-top: 2em;
 	margin-bottom: .2em;
+}
+
+.post-title-edit {
+	margin: 3em 0 1em 0;
+}
+
+.post-title-edit,
+.post-content-edit {
+	border: 1px solid $light-gray;
+	border-radius: 3px;
+	width: 80%;
+	margin-left: 10%;
+	padding: .6em;
 }
 
 .post-author {
@@ -52,4 +65,18 @@
 .post-content {
 	width: 80%;
 	margin: auto;
+}
+
+.edit {
+	display: none;
+}
+
+.edit-post {
+	color: $blue;
+	font-size: 2em;
+	margin-left: 10%;
+	margin-top: .5em;
+	height: 50px;
+	line-height: 50px;
+	width: 80%;
 }
