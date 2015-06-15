@@ -14,12 +14,13 @@ export default Backbone.View.extend({
 	},
 
 	render: function() {
-		this.$el.html(this.template(this.model));
+		this.$el.html(this.template(this.model.toJSON()));
 	},
 
 	deletePost: function() {
 		this.collection.remove(this.model._id);
 		// console.log(this.model._id);
+		console.log(this.collection);
 	}
 
 });

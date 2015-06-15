@@ -9,11 +9,24 @@
 	position: relative;
 }
 
+.fa-pencil {
+	position: absolute;
+	left: 3%;
+	top: 3%;
+	transition: all .3s linear;
+}
+
 .fa-close {
 	position: absolute;
 	right: 3%;
 	top: 3%;
 	transition: all .3s linear;
+}
+
+.fa-pencil:hover {
+	color: red;
+	cursor: pointer;
+	transform: scale(1.5);
 }
 
 .fa-close:hover {

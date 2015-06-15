@@ -38,15 +38,10 @@ var Router = Backbone.Router.extend({
 	},
 
 	loadPost: function(id) {
-		this.posts.fetch().then(function(posts) {
-			_.each(posts, function(post) {
-				if(post._id === id) {
-					var blogPost = new BlogView({model: post, collection: posts});
-					blogPost._id = id;
-					$('#blog-post').html(blogPost.el);
-				}
-			})
-		});
+		var post = this.posts.get(id);
+		console.log(post);
+		this.blogPost = new BlogView({model: post, collection: this.posts});
+		$('#blog-post').html(this.blogPost.el);
 	}
 
 });
