@@ -17,8 +17,9 @@ export default Backbone.View.extend({
 		this.$el.html(this.template(this.model));
 	},
 
-	deletePost: function(id) {
-		console.log(id);
+	deletePost: function() {
+		this.collection.remove(this.model._id);
+		// console.log(this.model._id);
 	}
 
 });

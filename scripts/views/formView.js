@@ -26,9 +26,9 @@ export default Backbone.View.extend({
 		e.preventDefault();
 		var content = $('.add-blog-content-input').val();
 		var title = $('.add-blog-title-input').val();
-		// var username = $('.').val();
+		var username = localStorage.getItem('username') || '';
 		this.collection.create({
-			// username: username,
+			username: username,
 			title: title,
 			content: content
 		})

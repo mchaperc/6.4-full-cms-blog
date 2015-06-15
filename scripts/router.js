@@ -41,7 +41,8 @@ var Router = Backbone.Router.extend({
 		this.posts.fetch().then(function(posts) {
 			_.each(posts, function(post) {
 				if(post._id === id) {
-					var blogPost = new BlogView({model: post});
+					var blogPost = new BlogView({model: post, collection: posts});
+					blogPost._id = id;
 					$('#blog-post').html(blogPost.el);
 				}
 			})

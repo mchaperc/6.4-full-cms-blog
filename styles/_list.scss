@@ -1,7 +1,7 @@
 .blog-post-list {
 	@include span-columns(3);
 	@include omega();
-	background-color: rgb(240,240,240);
+	background: linear-gradient(rgb(240,240,240), $base-background-color);
 	height: 100%;
 }
 
@@ -16,6 +16,10 @@ li {
 a {
 	color: $blue;
 	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
 }
 
 a:visited {

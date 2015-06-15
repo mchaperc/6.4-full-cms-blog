@@ -11,8 +11,8 @@
 
 .fa-close {
 	position: absolute;
-	right: 2%;
-	top: 5%;
+	right: 3%;
+	top: 3%;
 	transition: all .3s linear;
 }
 
@@ -23,11 +23,17 @@
 }
 
 .post-title {
-	border-bottom: 1px solid $light-gray;
 	width: 80%;
 	margin: auto;
 	margin-top: 1em;
-	margin-bottom: .5em;
+	margin-bottom: .2em;
+}
+
+.post-author {
+	border-bottom: 1px solid $light-gray;
+	width: 80%;
+	margin: auto;
+	margin-bottom: .6em;
 }
 
 .post-content {

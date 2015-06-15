@@ -21,6 +21,7 @@ export default Backbone.View.extend({
 		e.preventDefault();
 		var username = this.$('.username-input').val();
 		console.log(username);
+		window.localStorage.setItem('username', username);
 		this.collection.add({
 			username: username,
 		});
